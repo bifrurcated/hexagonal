@@ -8,9 +8,11 @@
     <artifactId>hexagonal</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
+
     <modules>
         <module>credit-domain</module>
         <module>credit-infrastructure-spring</module>
+        <module>credit-infrastructure-quarkus</module>
         <module>credit-api-rest</module>
         <module>credit-account-pool-api</module>
         <module>credit-infrastructure-persistence-jpa</module>

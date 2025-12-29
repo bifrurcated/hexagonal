@@ -1,0 +1,42 @@
+spring:
+  datasource:
+    hikari:
+      auto-commit: off
+    driver-class-name: org.postgresql.Driver
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/postgres?currentSchema=credit_schema}
+    username: ${SPRING_DATASOURCE_USERNAME:postgres}
+    password: ${SPRING_DATASOURCE_PASSWORD:123}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        default_schema: credit_schema
+
+account-pool:
+  base-url: http://account-pool
+
+springdoc:
+  cache:
+    disabled: true
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
+  api-docs:
+    enabled: true
+  show-actuator: true
+  writer-with-default-pretty-printer: true
+  use-fqn: true
+
+server:
+  port: 8080
+
+management:
+  endpoint:
+    health:
+      access: read_only
+    info:
+      access: read_only
+    prometheus:
+      access: read_only

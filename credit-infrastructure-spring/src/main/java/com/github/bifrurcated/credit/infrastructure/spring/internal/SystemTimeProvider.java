@@ -1,6 +1,7 @@
 package com.github.bifrurcated.credit.infrastructure.spring.internal;
 
 import com.github.bifrurcated.credit.domain.spi.TimeProvider;
+import org.jspecify.annotations.NonNull;
 import org.springframework.stereotype.Service;
 
 import java.time.Clock;
@@ -15,6 +16,7 @@ public class SystemTimeProvider implements TimeProvider {
         this.clock = Clock.systemDefaultZone();
     }
 
+    @NonNull
     @Override
     public LocalDate currentDate() {
         return LocalDate.now(clock);

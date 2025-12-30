@@ -26,6 +26,7 @@
         <spring-boot.version>4.0.1</spring-boot.version>
         <swagger-core-jakarta.version>2.2.38</swagger-core-jakarta.version>
         <jakarta.validation-api.version>3.1.1</jakarta.validation-api.version>
+        <jspecify.version>1.0.0</jspecify.version>
     </properties>
 
     <dependencyManagement>

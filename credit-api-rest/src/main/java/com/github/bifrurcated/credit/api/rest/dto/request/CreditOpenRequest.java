@@ -1,8 +1,10 @@
 package com.github.bifrurcated.credit.api.rest.dto.request;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.Digits;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -17,6 +19,8 @@ public record CreditOpenRequest(
         @Schema(description = "Идентификатор пользователя")
         UUID userId,
 
+        @DecimalMin("10.00")
+        @Positive
         @Digits(integer = 11, fraction = 2)
         @NotNull
         @Schema(description = "Сумма кредита")

@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: com.github.bifrurcated
+testFramework: junit
+sourceLanguage: java
+buildTool: maven
+features: [ app-name, data, data-jpa, hibernate-validator, http-client, jackson-databind, java, java-application, jdbc-hikari, jspecify, junit, logback, management, maven, maven-enforcer-plugin, micronaut-aot, micronaut-http-validation, micronaut-processing-compiler-args, netty-server, openapi, postgres, properties, readme, shade, spring, spring-data-jpa, static-resources, swagger-ui, test-resources ]

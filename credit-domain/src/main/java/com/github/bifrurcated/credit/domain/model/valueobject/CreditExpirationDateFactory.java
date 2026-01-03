@@ -1,6 +1,6 @@
 package com.github.bifrurcated.credit.domain.model.valueobject;
 
-import com.github.bifrurcated.credit.domain.exception.CreditExpirationDateIsBeforeCurrentDateException;
+import com.github.bifrurcated.credit.domain.model.valueobject.exception.CreditExpirationDateIsBeforeCurrentDateException;
 import com.github.bifrurcated.credit.domain.spi.TimeProvider;
 import org.jspecify.annotations.NonNull;
 

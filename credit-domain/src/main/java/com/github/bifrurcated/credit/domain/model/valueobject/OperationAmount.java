@@ -1,6 +1,6 @@
 package com.github.bifrurcated.credit.domain.model.valueobject;
 
-import com.github.bifrurcated.credit.domain.exception.CreditAmountNegativeException;
+import com.github.bifrurcated.credit.domain.model.valueobject.exception.CreditAmountNegativeException;
 import org.jspecify.annotations.NonNull;
 
 import java.math.BigDecimal;

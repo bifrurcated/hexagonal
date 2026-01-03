@@ -27,7 +27,7 @@ public class CreditExpirationDateFactory {
 
     /**
      * На прямую данный класс создать нельзя, для создания правильного экземпляра {@link CreditExpirationDate}
-     * воспользуйте фабричным методом {@link CreditExpirationDateFactory#create(LocalDate)}
+     * воспользуйтесь фабричным методом {@link CreditExpirationDateFactory#create(LocalDate)}
      */
     public static final class CreditExpirationDate {
 

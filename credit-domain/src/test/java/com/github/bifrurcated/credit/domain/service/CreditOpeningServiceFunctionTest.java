@@ -1,11 +1,10 @@
-package com.github.bifrurcated.credit.domain;
+package com.github.bifrurcated.credit.domain.service;
 
 import com.github.bifrurcated.credit.domain.service.command.CreditOpenCommand;
 import com.github.bifrurcated.credit.domain.model.Credit;
 import com.github.bifrurcated.credit.domain.model.CreditStatus;
 import com.github.bifrurcated.credit.domain.model.valueobject.CreditAmount;
 import com.github.bifrurcated.credit.domain.model.valueobject.CreditExpirationDateFactory;
-import com.github.bifrurcated.credit.domain.service.CreditOpeningService;
 import com.github.bifrurcated.credit.domain.spi.stubs.CreditAccountPoolStub;
 import com.github.bifrurcated.credit.domain.spi.stubs.CreditRepositoryStub;
 import com.github.bifrurcated.credit.domain.spi.stubs.IdGeneratorStub;
@@ -20,7 +19,7 @@ import java.util.UUID;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class UserOpenCreditFunctionTest {
+class CreditOpeningServiceFunctionTest {
 
     @Test
     void should_user_open_credit() {

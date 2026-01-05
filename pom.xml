@@ -25,7 +25,7 @@
 
         <spring-boot.version>4.0.1</spring-boot.version>
         <swagger-core-jakarta.version>2.2.38</swagger-core-jakarta.version>
-        <jakarta.validation-api.version>3.1.1</jakarta.validation-api.version>
+        <jakarta.jakartaee-bom.version>11.0.0</jakarta.jakartaee-bom.version>
         <jspecify.version>1.0.0</jspecify.version>
     </properties>
 
@@ -58,9 +58,16 @@
                 <version>${swagger-core-jakarta.version}</version>
             </dependency>
             <dependency>
-                <groupId>jakarta.validation</groupId>
-                <artifactId>jakarta.validation-api</artifactId>
-                <version>${jakarta.validation-api.version}</version>
+                <groupId>org.jspecify</groupId>
+                <artifactId>jspecify</artifactId>
+                <version>${jspecify.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>jakarta.platform</groupId>
+                <artifactId>jakarta.jakartaee-bom</artifactId>
+                <version>${jakarta.jakartaee-bom.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>

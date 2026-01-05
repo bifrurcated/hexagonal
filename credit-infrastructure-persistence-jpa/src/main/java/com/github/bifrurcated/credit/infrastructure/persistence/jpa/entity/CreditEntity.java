@@ -7,19 +7,16 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.persistence.Version;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
 
 @Entity
 @Table(name = "credit")
-public class CreditEntity {
+public class CreditEntity extends BaseEntity {
 
     @Id
     private UUID id;
@@ -45,14 +42,6 @@ public class CreditEntity {
     @Version
     @Column(nullable = false)
     private Long version;
-
-    @CreationTimestamp
-    @Column(nullable = false)
-    private LocalDateTime createTime;
-
-    @UpdateTimestamp
-    @Column(nullable = false)
-    private LocalDateTime updateTime;
 
     public CreditEntity() {
     }
@@ -119,21 +108,5 @@ public class CreditEntity {
 
     public void setVersion(Long version) {
         this.version = version;
-    }
-
-    public LocalDateTime getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(LocalDateTime createTime) {
-        this.createTime = createTime;
-    }
-
-    public LocalDateTime getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(LocalDateTime updateTime) {
-        this.updateTime = updateTime;
     }
 }

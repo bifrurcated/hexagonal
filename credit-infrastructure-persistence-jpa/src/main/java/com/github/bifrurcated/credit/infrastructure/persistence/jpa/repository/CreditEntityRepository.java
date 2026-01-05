@@ -1,11 +1,11 @@
 package com.github.bifrurcated.credit.infrastructure.persistence.jpa.repository;
 
 import com.github.bifrurcated.credit.infrastructure.persistence.jpa.entity.CreditEntity;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+import jakarta.data.repository.CrudRepository;
+import jakarta.data.repository.Repository;
 
 import java.util.UUID;
 
 @Repository
-public interface CreditEntityJpaRepository extends JpaRepository<CreditEntity, UUID> {
+public interface CreditEntityRepository extends CrudRepository<CreditEntity, UUID> {
 }

@@ -12,8 +12,8 @@ public class SystemTimeProvider implements TimeProvider {
 
     private final Clock clock;
 
-    public SystemTimeProvider() {
-        this.clock = Clock.systemDefaultZone();
+    public SystemTimeProvider(Clock clock) {
+        this.clock = clock;
     }
 
     @Override

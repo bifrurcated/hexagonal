@@ -6,8 +6,6 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingConstants;
 
-import java.time.LocalDateTime;
-
 @Mapper(componentModel = MappingConstants.ComponentModel.CDI)
 public interface CreditEntityMapper {
 
@@ -19,7 +17,7 @@ public interface CreditEntityMapper {
     @Mapping(target = "expirationDate", expression = "java(credit.expirationDate().value())")
     @Mapping(target = "operations", ignore = true)
     @Mapping(target = "version", ignore = true)
-    @Mapping(target = "updateTime", source = "currentDateTime")
-    @Mapping(target = "createTime", source = "currentDateTime")
-    CreditEntity toCreditEntity(Credit credit, LocalDateTime currentDateTime);
+    @Mapping(target = "updateTime", ignore = true)
+    @Mapping(target = "createTime", ignore = true)
+    CreditEntity toCreditEntity(Credit credit);
 }

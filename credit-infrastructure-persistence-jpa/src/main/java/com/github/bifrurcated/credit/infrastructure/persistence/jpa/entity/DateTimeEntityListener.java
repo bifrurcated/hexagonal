@@ -1,12 +1,12 @@
 package com.github.bifrurcated.credit.infrastructure.persistence.jpa.entity;
 
 import com.github.bifrurcated.credit.infrastructure.persistence.jpa.spi.EntityDateTimeProvider;
-import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
+import jakarta.inject.Singleton;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
 
-@ApplicationScoped
+@Singleton
 public class DateTimeEntityListener {
 
     private final EntityDateTimeProvider entityDateTimeProvider;

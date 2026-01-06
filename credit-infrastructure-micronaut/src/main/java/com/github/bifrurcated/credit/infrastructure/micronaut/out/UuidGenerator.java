@@ -1,12 +1,12 @@
-package com.github.bifrurcated.credit.infrastructure.quarkus.internal;
+package com.github.bifrurcated.credit.infrastructure.micronaut.out;
 
 import com.github.bifrurcated.credit.domain.spi.IdGenerator;
-import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Singleton;
 import org.jspecify.annotations.NonNull;
 
 import java.util.UUID;
 
-@ApplicationScoped
+@Singleton
 public class UuidGenerator implements IdGenerator {
 
     @Override

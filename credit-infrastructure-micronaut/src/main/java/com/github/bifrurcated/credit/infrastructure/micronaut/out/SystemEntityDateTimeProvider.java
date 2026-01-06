@@ -1,13 +1,13 @@
-package com.github.bifrurcated.credit.infrastructure.quarkus.internal;
+package com.github.bifrurcated.credit.infrastructure.micronaut.out;
 
 import com.github.bifrurcated.credit.infrastructure.persistence.jpa.spi.EntityDateTimeProvider;
-import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Singleton;
 import org.jspecify.annotations.NonNull;
 
 import java.time.Clock;
 import java.time.LocalDateTime;
 
-@ApplicationScoped
+@Singleton
 public class SystemEntityDateTimeProvider implements EntityDateTimeProvider {
 
     private final Clock clock;

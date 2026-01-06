@@ -1,19 +1,19 @@
-package com.github.bifrurcated.credit.infrastructure.micronaut.internal;
+package com.github.bifrurcated.credit.infrastructure.spring.out;
 
 import com.github.bifrurcated.credit.infrastructure.persistence.jpa.spi.EntityDateTimeProvider;
-import jakarta.inject.Singleton;
 import org.jspecify.annotations.NonNull;
+import org.springframework.stereotype.Service;
 
 import java.time.Clock;
 import java.time.LocalDateTime;
 
-@Singleton
+@Service
 public class SystemEntityDateTimeProvider implements EntityDateTimeProvider {
 
     private final Clock clock;
 
-    public SystemEntityDateTimeProvider(Clock clock) {
-        this.clock = clock;
+    public SystemEntityDateTimeProvider() {
+        this.clock = Clock.systemDefaultZone();
     }
 
     @Override

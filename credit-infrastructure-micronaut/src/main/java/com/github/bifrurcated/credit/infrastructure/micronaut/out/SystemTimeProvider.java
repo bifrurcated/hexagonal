@@ -1,4 +1,4 @@
-package com.github.bifrurcated.credit.infrastructure.micronaut.internal;
+package com.github.bifrurcated.credit.infrastructure.micronaut.out;
 
 import com.github.bifrurcated.credit.domain.spi.TimeProvider;
 import jakarta.inject.Singleton;

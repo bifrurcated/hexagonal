@@ -1,24 +1,23 @@
-package com.github.bifrurcated.credit.infrastructure.spring.internal;
+package com.github.bifrurcated.credit.infrastructure.quarkus.out;
 
 import com.github.bifrurcated.credit.domain.spi.TimeProvider;
+import jakarta.enterprise.context.ApplicationScoped;
 import org.jspecify.annotations.NonNull;
-import org.springframework.stereotype.Service;
 
 import java.time.Clock;
 import java.time.LocalDate;
 
-@Service
+@ApplicationScoped
 public class SystemTimeProvider implements TimeProvider {
 
     private final Clock clock;
 
-    public SystemTimeProvider() {
-        this.clock = Clock.systemDefaultZone();
+    public SystemTimeProvider(Clock clock) {
+        this.clock = clock;
     }
 
-    @NonNull
     @Override
-    public LocalDate currentDate() {
+    public @NonNull LocalDate currentDate() {
         return LocalDate.now(clock);
     }
 }

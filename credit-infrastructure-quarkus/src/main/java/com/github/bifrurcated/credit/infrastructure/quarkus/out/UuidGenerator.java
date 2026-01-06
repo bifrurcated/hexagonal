@@ -1,12 +1,12 @@
-package com.github.bifrurcated.credit.infrastructure.spring.internal;
+package com.github.bifrurcated.credit.infrastructure.quarkus.out;
 
 import com.github.bifrurcated.credit.domain.spi.IdGenerator;
+import jakarta.enterprise.context.ApplicationScoped;
 import org.jspecify.annotations.NonNull;
-import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 
-@Service
+@ApplicationScoped
 public class UuidGenerator implements IdGenerator {
 
     @Override

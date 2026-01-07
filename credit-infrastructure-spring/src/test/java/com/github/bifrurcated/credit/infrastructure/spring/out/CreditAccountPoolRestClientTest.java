@@ -17,7 +17,10 @@ import static org.springframework.test.web.client.match.MockRestRequestMatchers.
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.requestTo;
 import static org.springframework.test.web.client.response.MockRestResponseCreators.withSuccess;
 
-@RestClientTest({AccountPoolRestClient.class, CreditAccountPoolRestClient.class})
+@RestClientTest(
+        value = {AccountPoolRestClient.class, CreditAccountPoolRestClient.class},
+        properties = "account-pool.rest-client.enabled=true"
+)
 class CreditAccountPoolRestClientTest {
 
     @TestConfiguration

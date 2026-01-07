@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
-@ConditionalOnProperty(value = "account-pool.rest-client.enabled")
+@ConditionalOnProperty(value = "account-pool.rest-client.enabled", havingValue = "true")
 @Primary
 @Service
 public class CreditAccountPoolRestClient implements CreditAccountPool {

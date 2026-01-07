@@ -12,8 +12,8 @@ public class SystemEntityDateTimeProvider implements EntityDateTimeProvider {
 
     private final Clock clock;
 
-    public SystemEntityDateTimeProvider() {
-        this.clock = Clock.systemDefaultZone();
+    public SystemEntityDateTimeProvider(Clock clock) {
+        this.clock = clock;
     }
 
     @Override

@@ -6,9 +6,11 @@ import com.github.bifrurcated.credit.account.pool.api.exception.CreditAccountPoo
 import com.github.bifrurcated.credit.domain.spi.CreditAccountPool;
 import org.jspecify.annotations.NonNull;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 @ConditionalOnProperty(value = "account-pool.rest-client.enabled")
+@Primary
 @Service
 public class CreditAccountPoolRestClient implements CreditAccountPool {
 

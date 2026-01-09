@@ -1,11 +1,12 @@
-# Пример реализации "clean/hexagonal architecture" на языке java
+# An example of the implementation of "clean/hexagonal architecture" in java
 
-Вообще чистая или гексогональная архитектура с DDD это то, как пишут библиотеки.
-У нас есть core часть, которая написана на чистой java или с минимальной зависимостью и далее мы добавляем дополнительные модули, расширяющияя core часть.
+In general, a pure or hexagonal architecture with DDD is how libraries are written.
+We have a core part that is written in pure java or with minimal dependency, and then we add additional modules that expand the core part.
 
-Полезная информация:
+Useful information:
 * [
 Hexagonal Architecture in Practice, Live Coding That Will Make Your Applications More Sustainable](https://youtu.be/3siPsq17NAU?si=ngvjLELWrJVqrMAu)
+* [Live Coding The Hive: building a microservices ready modular monolith by Thomas PIERRAIN, Julien To](https://youtu.be/VKcRNtj0tzc?si=K52ZClrERJ4wGE01)
 * [
 Рустам Ахметов — Архитектура приложения и ошибки проектирования](https://youtu.be/X6QdWTE1HHw?si=lHc3VgX1KExjCpZr)
 * [
